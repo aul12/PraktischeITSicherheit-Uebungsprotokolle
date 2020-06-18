@@ -1107,16 +1107,41 @@ Zuerst wird nur eine Liste aller Geräte mit offenem Port 80 angelegt:
 ```
 sudo zmap -p 80 -B 10M 134.60.0.0/16 2> /dev/null | grep 134.60 > apache
 ```
-mit nmap kann dann die Version identifiziert werden:
+mit nmap kann dann die Version/Software identifiziert werden:
 ```
 nmap -n -T16 -iL apache -sV -p 80 > scan
 ```
+dann muss nur noch das vorkommen von Apache gezählt werden:
+```
+cat scan | grep Apache | wc -l
+```
+zum Zeitpunkt des scannens liefen 368 Apache Server im Uni Netz.
 
 ## SSL
 Mit der Liste aus dem vorherigen Aufgabenteil:
 ```
 nmap --script ssl-enum-ciphers -p 443 -iL apache > tls
 ```
+dann wird mit einem Regex nach DES gesucht, wobei dopplungen für einzelne Hosts vermieden werden, der Einfachheit
+halber wurde hierfür ein kleine Python script geschrieben
+```python
+import re
+
+test_str = open("/home/paul/tls").read()
+print(test_str)
+
+regex = r"443\/tcp open  https\n\|.*\n\|\s.+\n\|.+\n(\|.+\n)*\|(.*DES.*)"
+
+matches = re.finditer(regex, test_str, re.MULTILINE)
+
+count = 0
+for matchNum, match in enumerate(matches, start=1):
+    print(f"Result: {match.group(2)}")
+    count += 1
+
+print(count)
+```
+das Skript gibt aus das es 403 Server gibt die noch eine Verschlüsselung aus der DES-Familie unterstützen.
 
 ## Betriebssystem
 Zuerst von allen Geräten das Betriebssystem herausfinden
