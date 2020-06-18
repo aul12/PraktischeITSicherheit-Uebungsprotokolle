@@ -1,6 +1,6 @@
 PANDOC=pandoc
 
-all: 1-Port-Scanning.pdf
+all: 1-Port-Scanning.pdf 2-Slow-DDoS.pdf
 
 %.html: %/main.md
 	$(PANDOC) $< -o $@
