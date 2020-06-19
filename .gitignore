@@ -6,3 +6,11 @@
 *.class
 *.png
 *.txt
+pyvenv.cfg
+lib/
+lib64
+share/
+bin/
+share/
+etc/
+.ipynb_checkpoints/

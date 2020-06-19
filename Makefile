@@ -10,3 +10,4 @@ all: 1-Port-Scanning.pdf 2-Slow-DDoS.pdf 3-Reproducible-Builds.pdf
 
 clean:
 	rm -f *.pdf
+	rm -f *.html
