@@ -41,7 +41,7 @@ Im Detail sind die Funktionen:
         Für alle anderen Eingaben ist der Befehl nicht wohldefiniert.
  * `void setGlobalDirectory(void *)`: setzt den Wert von `global_directory` auf den Wert des Arguments.
 
-Um eine Shell zu öffnen reicht der Aufruf von `system` mit dem Argument `sh`. Dafür muss `executeCommand` mit dem
+Um eine Shell zu öffnen reicht der Aufruf von `system` mit dem Argument `"sh"`. Dafür muss `executeCommand` mit dem
 Argument `0xcafebabe` aufgerufen werden. Davor muss `global_directory` so gesetzt werden, dass es auf einen leeren
 String, also ein Nullzeichen zeigt. Dafür muss `setGlobalDirectory` entsprechend aufgerufen werden, hierfür nehmen
 wir einfach den Nullterminator des Globalen Strings `sh`. Der Nullterminator ist an Adresse `0x080487e7`.
