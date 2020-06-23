@@ -30,7 +30,8 @@ zmap 2.1.1
 ```
 
 ## Interfaces
-Die Interfaces sind ebenfalls korrekt eingerichtet, die Ausgabe lautet:
+Die Interfaces sind ebenfalls korrekt eingerichtet, der Host hat die IP-Adressen 
+`10.0.2.15` und `172.20.0.1`:
 ```
 kali@kali:~$ ip addr show
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
