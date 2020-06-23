@@ -83,3 +83,11 @@ psec@VirtualBox:~/pSec$ ./aufgabe2 "$(python3 a2.py)"
 Your name includes 50 times the char 'a'
 $ 
 ```
+
+# Fazit
+In dieser Aufgabe wurde im ersten Schritt ein "klassischer" Bufferoverflow-Angriff ausgenutzt. In der zweiten Aufgabe
+wurde ROP genutzt um mehrere Funktionen über einen Bufferoverflow-Angriff aufzurufen.
+
+Zusammenfassend haben mir die Aufgaben gefallen, sie haben einen guten Einblick in Buffer-Overflows gegeben. Was mir
+jedoch gefehlt hat, was in der Vorlesung länger behandelt wurde, sind Gadgets wo z.B. nur Teile einer Funktion oder sogar
+nur Teile von Instruktionen genutzt werden.

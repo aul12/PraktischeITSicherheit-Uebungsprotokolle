@@ -1196,3 +1196,10 @@ also primär Desktop und Server Betriebssysteme:
 
 ![Betriebssystemverteilung ohne Embedded](os_without_embedded.eps)
 
+# Fazit
+In der Übung wurden in mehreren Aufgaben diverse Netzwerke gescanned, sowohl mit NMap als auch mit ZMap. Dadurch
+wurde die Benutzung von NMap und ZMap erlernt, sowie die wichtigsten Konzepte aus der Vorlesung geübt.
+
+Die Übung war unterhaltsam, vor allem die Capture-the-Flag ähnlich Aufgabe, in Summe hat die Bearbeitung der Übung
+jedoch deutlich länger als die veranschlagten 90 Minuten gedauert (selbst wenn die Zeit die nur zum Scannen genutzt
+wurde ausgenommen wurde).

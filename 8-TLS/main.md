@@ -146,3 +146,12 @@ func handle(w http.ResponseWriter, req *http.Request) {
 Nach dem erneuten Testen erreicht der Server ein *A+* Rating:
 
 ![Ergebnis des SSL-Tests mit Verbesserungen](ssltest_2.png)
+
+# Fazit
+In diesen Aufgaben wurde, aufeinander aufbauend, ein Webserver implementiert, mit dem Ziel, dass dieser mit *A+* bewertet
+wird. Hierfür wurde Go genutzt.
+
+Die Art der Aufgaben auf diesem Blatt fand ich gut. Mir hat jedoch etwas Erklärung zu Go gefehlt, da ich im vorraus
+fast keine Erfahrung mit Go hatte. Außerdem war die Tatsache, dass man einen eigenen Webserver (geht über BW-Cloud,
+ist aber etwas Konfigurationsaufwand) sowie einen validen DNS-Eintrag braucht störend. Zudem wurden diese beiden
+Einschränkungen nicht deutlich auf dem Übungsblatt hervorgehoben.

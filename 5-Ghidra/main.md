@@ -45,3 +45,12 @@ dieses ergibt z.B. für den Text `aaaaaaaaaa` die Chiffre `iiiiiiiiii`. Diese wi
 Das Passwort ist immer eine zufällige Permutation aller Zeichen eines Strings im Programmcode (der String ist 
 initial `0123456789`). Durch Patchen des Strings (wie in der VL beschrieben) zu `0000000000` sind alle Passwörter
 Permutationen von `0` also wieder `0000000000`.
+
+# Fazit
+In dieser Aufgabe wurden drei verschiedene Anwendungen analysiert und reverse-engineered. Hierbei wurde die Anwendung
+von Ghidra geübt.
+
+Zusammenfassend hat mir die Übung gefallen, sie hat einen einfachen Einstieg in Ghidra ermöglicht und einen Überblick
+darüber gegeben was mit Ghidra möglich ist.
+
+

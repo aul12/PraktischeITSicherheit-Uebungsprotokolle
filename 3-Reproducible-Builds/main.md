@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
 
 New `Makefile`:
 ```Makefile
-ERSION="\"$(shell cat VERSION)\""
+VERSION="\"$(shell cat VERSION)\""
 
 CC=g++
 CPPFLAGS=-Wall -O2 -DVERSION=$(VERSION)
@@ -88,3 +88,12 @@ main: $(SOURCES)
 # Assignment 4
  * The APKs match
  * To be sure that the binary is actually the one that has been compiled on needs to check the complete Dockerfile and all parts of the build process. Additionally the script for checking if the applications are identical needs to be checked.
+
+# Conclusion
+In this exercise multiple different C/C++ programs and their respective Makefiles had to be changed to achieve a
+reproducable build. Additionally the "Signal" applications has been checked for reproducibility.
+
+In my opinion the exercise relied to much on the C/C++ languages and exotic things that are possible when using
+a preprocessor in combination with a makefile. I think most real world application do not rely on such techniques,
+so that the reproducibility faces different challenges. I liked the idea of the last exercise, sadly the actual
+exercise only consisted of copying commands.

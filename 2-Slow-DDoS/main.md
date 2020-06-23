@@ -175,3 +175,12 @@ public class RuDY {
    * Semantische Nachrichtenanalyse: Kontroller ob Empfangene Nachrichten (-Teile) sinnvoll sind
    * Minimale Übertragungsraten (muss natürlich entsprechend gewählt werden, so dass valide Clients weiter zugreifen
         können).
+
+# Fazit
+In der Übung wurden kleine Teile eines Webservers mit Apache-ähnlichem Aufbau implementiert. An diesen Server wurden
+dann Slowloris und R.U.D.Y Angriffe ausprobiert. Damit wurde fast der gesamte Vorlesungsstoff praktisch umgesetzt und
+getestet.
+
+Zusammenfassend fand ich die Übung sehr gut. Fast der gesamte Inhalt der Vorlesung wurde wiederholt, und durch das
+Implementieren weiter vertieft. Die einzige Verbesserungsmöglichkeit wäre vielleicht das Ausprobieren der Angriffe
+an einem echten Apache Webserver (natürlich in einer kontrollierten Umgebung).
