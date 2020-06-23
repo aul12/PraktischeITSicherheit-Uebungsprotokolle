@@ -1191,7 +1191,7 @@ plt.savefig("os.svg")
 das resultierende Verteilungsdiagram, sowie der selbe Plot nur mit Betriebssystemen die nicht "embedded" enthalten, 
 also primär Desktop und Server Betriebssysteme:
 
-![Betriebssystemverteilung](1-Port-Scanning/os.eps)
+![Betriebssystemverteilung](os.eps)
 
-![Betriebssystemverteilung ohne Embedded](1-Port-Scanning/os_without_embedded.eps)
+![Betriebssystemverteilung ohne Embedded](os_without_embedded.eps)
 

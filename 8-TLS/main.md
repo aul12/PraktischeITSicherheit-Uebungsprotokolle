@@ -74,13 +74,13 @@ angepasst.
 ## Test
 Die Website lässt sich jetzt ohne Zertikatfehler öffnen:
 
-![Website mit Zertifikatsinformation](8-TLS/website.png)
+![Website mit Zertifikatsinformation](website.png)
 
 ## SSL-Test
 Wie schon in der Aufgabenstellung beschrieben erreicht die Website nur ein Resultat von *B*, Grund dafür ist die fehlende
 Protokollunterstützung für TLS 1.3.
 
-![Ergebnis des SSL-Tests](8-TLS/ssltest_1.png)
+![Ergebnis des SSL-Tests](ssltest_1.png)
 
 #  Konfiguration & Rating
 Der verbesserte Webserver erfolgt wieder auf Basis des gleichen Beispiels 
@@ -145,4 +145,4 @@ func handle(w http.ResponseWriter, req *http.Request) {
 
 Nach dem erneuten Testen erreicht der Server ein *A+* Rating:
 
-![Ergebnis des SSL-Tests mit Verbesserungen](8-TLS/ssltest_2.png)
+![Ergebnis des SSL-Tests mit Verbesserungen](ssltest_2.png)
