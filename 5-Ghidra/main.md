@@ -23,8 +23,8 @@ Das Program akzeptiert zwei Argument mit jeweils genau 10 Zeichen länge.
 Das erste Argument wird transformiert und muss dann gleich dem zweiten Argument sein. 
 Die Transformation erfordert, dass das Wort nur aus Buchstaben besteht, diese werden im ersten Schritt alle
 zu Kleinbuchstaben umgewandelt. Im nächsten Schritt wird der ASCII-Wert jeden Buchstabens mit 10 Multipliziert und
-Modulo `0x1A` gerechnet. Auf das Ergebniss wird dann der ASCII Wert von "a" addiert und dieses Ergebniss wird wieder
-nach ASCII repräsentation Interpretiert.
+Modulo `0x1A` gerechnet. Auf das Ergebnis wird dann der ASCII Wert von "a" addiert und dieses Ergebnis wird wieder
+nach ASCII Interpretiert.
 
 Um die Transformation schnell ausrechnen zu können wurde ein kleine Python Skript geschrieben:
 ```python

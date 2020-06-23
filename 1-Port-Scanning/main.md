@@ -1087,13 +1087,13 @@ Der IP-Block der Uni ist 134.60.0.0/16 (also 134.60.X.X).
 
 ## Scan mit NMAP
 
-NMap scanned den Bereich in 3.05 Sekunden und finet 103 Hosts (`nmap -p 80 134.60.0.0/23`).
+NMap scanned den Bereich in 3.05 Sekunden und findet 103 Hosts (`nmap -p 80 134.60.0.0/23`).
 
 ## Scan mit ZMap
 ZMap findet deutlich weniger Geräte (varriert zwischen den Scans), braucht dafür aber auch etwas kürzer (` sudo zmap -p 80 134.60.0.0/23`).
 
 ## Vergleich NMAp mit nur offenen Ports
-Wenn mit NMap nur geräte mit offenem Port 80 gescanned werden is NMap ähnlich schnell wie ZMap (`nmap -iL hosts -p80`).
+Wenn mit NMap nur Geräte mit offenem Port 80 gescanned werden is NMap ähnlich schnell wie ZMap (`nmap -iL hosts -p80`).
 
 # Inventarisierung des Uninetzes
 ## HTTPS-Server
@@ -1101,7 +1101,7 @@ Es werden alle Geräte mit offenem Port 443 gesucht:
 ```
 sudo zmap -p 443 -B 10M 134.60.0.0/16 | grep 134.60 | wc -l
 ```
-zum Zeitpunkt des scannes waren es zwischen 238 und 255 Geräte.
+zum Zeitpunkt des Scannens waren es zwischen 238 und 255 Geräte.
 
 ## Apache
 Zuerst wird nur eine Liste aller Geräte mit offenem Port 80 angelegt:
@@ -1112,19 +1112,19 @@ mit nmap kann dann die Version/Software identifiziert werden:
 ```
 nmap -n -T16 -iL apache -sV -p 80 > scan
 ```
-dann muss nur noch das vorkommen von Apache gezählt werden:
+dann muss nur noch das Vorkommen von Apache gezählt werden:
 ```
 cat scan | grep Apache | wc -l
 ```
-zum Zeitpunkt des scannens liefen 368 Apache Server im Uni Netz.
+zum Zeitpunkt des Scannens liefen 368 Apache Server im Uni Netz.
 
 ## SSL
 Mit der Liste aus dem vorherigen Aufgabenteil:
 ```
 nmap --script ssl-enum-ciphers -p 443 -iL apache > tls
 ```
-dann wird mit einem Regex nach DES gesucht, wobei dopplungen für einzelne Hosts vermieden werden, der Einfachheit
-halber wurde hierfür ein kleine Python script geschrieben
+dann wird mit einem Regex nach DES gesucht, wobei Dopplungen für einzelne Hosts vermieden werden, der Einfachheit
+halber wurde hierfür ein kleine Python Script geschrieben:
 ```python
 import re
 

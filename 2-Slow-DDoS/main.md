@@ -16,8 +16,6 @@ public static void main (String[] args) throws IOException {
 
         executorService.submit(new ConnectionThread(clientSocket));
 
-        //new ConnectionThread(clientSocket).start();
-
         System.out.println("Connection from " + clientSocket.getRemoteSocketAddress()
                 + "; Active Connections: " + ConnectionThread.activeConnections.get());
     }
@@ -168,12 +166,12 @@ public class RuDY {
  * Es handelt es sich um eine Apache ähnliche Architektur, da für jede Verbindung ein neuer Thread aufgemacht wird,
     dadurch wird der Server anfällig für Slow DDoS Angriffe.
  * Manche Endgeräte (vor allem mobile Geräte mit schlechter Internetanbindung) senden im regulären Betrieb bereits
-    nur sehr langsam Daten und könnten so fälschlicherweise als Angreifer klassifiziziert und damit ausgeschlossen
+    nur sehr langsam Daten und könnten so fälschlicherweise als Angreifer klassifiziert und damit ausgeschlossen
     werden.
  * Nein, so kann der Server nur noch weiter überlastet werden. Die Kosten für weitere Verbindungen sind für den Server
-    im vergleich zum Angreifer deutlich größer.
+    im Vergleich zum Angreifer deutlich größer.
  * Ansätze:
-   * Bessere Serverarchitektur: nicht für jeden Client eine eigene Verbindung, eher wie Nginx
+   * Bessere Serverarchitektur: nicht für jeden Client eine eigene Verbindung (vgl. Nginx)
    * Semantische Nachrichtenanalyse: Kontroller ob Empfangene Nachrichten (-Teile) sinnvoll sind
    * Minimale Übertragungsraten (muss natürlich entsprechend gewählt werden, so dass valide Clients weiter zugreifen
         können).

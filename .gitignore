@@ -4,7 +4,6 @@
 *.swp
 *.iml
 *.class
-*.png
 *.txt
 pyvenv.cfg
 lib/

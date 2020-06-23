@@ -4,13 +4,14 @@ author: Paul Nykiel
 date: \today
 ---
 
-# 1
- * A reproducible builds makes it possible for the end-user to check that the binary that is distributed for a program is build from the available source code. This makes it possible to find application with have been tampered with, either by the developer or by a third party. As XCode is not open source it would not have been possible to check XCode this way. Further advantages include a clear definition of the build environment which makes it easier for other users to build the application themselves. One disadvantage is the added complexity of the infrastructure required for reproducible builds and the fact that the user still needs to check the source code to find backdoors or other issues.
- * First of all you need to be sure that the original source code does not contain any malware or options to load malware. Even this step can be quit difficult for larger applications. Additionally the complete build environment needs to be checked, it is for example possible for the compiler to include malware into the program (see the Ken Thompson Hack).
+# Assignment 1
+ * A reproducible builds makes it possible for the end-user to check that the binary that is distributed for a program is build from the source code that is available. 
+    This makes it possible to find application with have been tampered with, either by the developer or by a third party. As XCode is not open source it would not have been possible to check XCode this way. Further advantages include a clear definition of the build environment which makes it easier for other users to build the application themselves. One disadvantage is the added complexity of the infrastructure required for reproducible builds and the fact that the user still needs to check the source code to find backdoors or other issues.
+ * First of all you need to be sure that the original source code does not contain any malware or options to load malware. This step can be quite difficult for larger applications. Additionally the complete build environment needs to be checked, it is for example possible for the compiler to include malware into the program (see the Ken Thompson Hack).
 
-# 2
+# Assignment 2
 ## Version option
-The non reproducibility is primarily due to the build-time and -date information in the output. All other information can be fixed, the time not.
+The non reproducibility is primarily due to the build-time and -date information in the output. All other information can be made constant, the time not.
 
 ##  Making the build reproducible
 The modified makefile is:
@@ -65,9 +66,9 @@ main: main.cpp
 
 ```
 
-# 3
+# Assignment 3
 ## Differences
-In some places the `a` and `b` are swapped, they were probably built in a different order
+In some places the `a` and `b` are swapped, they were probably built (or linked) in a different order.
 
 ## Functionality
 The functionality is not influenced as only the symbol table is changed.
@@ -84,6 +85,6 @@ main: $(SOURCES)
     $(CC) $(CFLAGS) -o main $(SOURCES)
 ```
 
-# 4
+# Assignment 4
  * The APKs match
  * To be sure that the binary is actually the one that has been compiled on needs to check the complete Dockerfile and all parts of the build process. Additionally the script for checking if the applications are identical needs to be checked.
